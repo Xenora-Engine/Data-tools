@@ -10,7 +10,7 @@ def main():
     print("3. Generate crossmap.txt")
     print("4. Generate native.txt")
 
-    choice = input("Enter your choice (1, 2, 3 ou 4) : ")
+    choice = input("Enter your choice (1, 2, 3 or 4) : ")
 
     if choice == '1':
         input_file = 'net_catalog/netCatalog.json'
