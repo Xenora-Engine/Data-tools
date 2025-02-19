@@ -1,7 +1,7 @@
 from catalog import extract_keys
 from crossmap import filter_cm
 from gen_crossmap import load_crossmap_data, allocate_crossmap_indices, write_crossmap_header
-from native import load_natives_data, write_natives_header
+from gen_native import load_natives_data, write_natives_header
 
 def main():
     print("Choice option")
