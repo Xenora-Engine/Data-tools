@@ -4,7 +4,7 @@ from gen_crossmap import load_crossmap_data, allocate_crossmap_indices, write_cr
 from native import load_natives_data, write_natives_header
 
 def main():
-    print("Que souhaitez-vous faire ?")
+    print("Choice option")
     print("1. Filter netCatalog.json")
     print("2. Filter crossmap.txt")
     print("3. Generate crossmap.txt")
