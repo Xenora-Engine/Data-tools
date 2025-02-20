@@ -47,7 +47,3 @@ def write_natives_header():
 
 {natives_buf}
 """)
-
-if __name__ == "__main__":
-    load_natives_data()
-    write_natives_header()
