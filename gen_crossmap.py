@@ -31,8 +31,3 @@ namespace zenith
     }};
 }}
 """)
-
-if __name__ == "__main__":
-    load_crossmap_data()
-    allocate_crossmap_indices()
-    write_crossmap_header()
