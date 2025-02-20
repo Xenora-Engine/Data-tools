@@ -4,12 +4,14 @@ def extract_keys(input_file, output_file, prefixes):
     with open(input_file, 'r') as infile:
         data = json.load(infile)
 
-    keys = [item['key'] for item in data.get('items', [])]
-
-    matching_keys = [key for key in keys if key.startswith(tuple(prefixes))]
+    matching_items = [
+        (item['key'], item.get('price', 'N/A'))
+        for item in data.get('items', [])
+        if item['key'].startswith(tuple(prefixes))
+    ]
 
     with open(output_file, 'w') as outfile:
-        for key in matching_keys:
-            outfile.write(key + '\n')
+        for key, price in matching_items:
+            outfile.write(f"{key}: {price}\n")
 
-    print(f"Successfuly filter in '{output_file}'.")
+    print(f"Succès ! Les données filtrées ont été enregistrées dans '{output_file}'.")
