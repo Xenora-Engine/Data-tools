@@ -1,0 +1,7 @@
+struct transaction {
+    std::string ;
+};
+
+std::vector<transaction> all_transactions = {
+    
+};
