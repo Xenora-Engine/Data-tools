@@ -1,6 +1,6 @@
 import os
 
-def filter_cm(entree, sortie):
+def filter_cm(entree, sortie, traductions):
     try:
         if not os.path.exists(entree):
             with open(entree, 'w', encoding='utf-8') as f:
@@ -15,6 +15,6 @@ def filter_cm(entree, sortie):
         with open(sortie, 'w', encoding='utf-8') as f:
             f.writelines(line)
         
-        print(f"Successfuly formatted : {sortie}")
+        print(traductions["filter_cm_success"].format(file=sortie))
     except Exception as e:
-        print(f"Fatal : {e}")
+        print(traductions["filter_error"].format(error=e))

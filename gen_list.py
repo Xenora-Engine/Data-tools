@@ -1,8 +1,8 @@
-def format_list_as_struct(lst, struct_name="transaction", var_name="all_transactions", double_field=False):
-    struct_name = input("Enter the name of the struct : ").strip() or struct_name
-    var_name = input("Enter the name of list : ").strip() or var_name
+def format_list_as_struct(lst, struct_name="transaction", traductions = "", var_name="all_transactions", double_field=False):
+    struct_name = input(traductions["struct_prompt_name"]).strip() or struct_name
+    var_name = input(traductions["struct_prompt_list"]).strip() or var_name
     
-    print("Enter the argument for the struct :")
+    print(traductions["struct_prompt_fields"])
     fields = input().strip().split(',')
     
     struct_def = "struct " + struct_name + " {\n    " + ";\n    ".join(f"std::string {field.strip()}" for field in fields) + ";\n};\n\n"

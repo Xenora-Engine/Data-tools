@@ -1,0 +1,23 @@
+{
+    "menu_filter_catalog": "1 netCatalog.jsonをフィルタリング",
+    "menu_format_catalog": "2 netCatalog.jsonをフォーマット",
+    "menu_filter_crossmap": "3 crossmap.txtをフィルタリング",
+    "menu_generate_crossmap": "4 crossmap.txtを生成",
+    "menu_generate_native": "5 native.txtを生成",
+    "menu_generate_struct_list": "6 入力から構造体とリストを生成",
+    "menu_quit": "7 終了",
+    "invalid_choice": "無効な選択です。1、2、3、4、5、または7を入力してください。",
+    "enter_choice": "選択を入力してください：",
+    "filter_success": "netCatalog.jsonが正常にフィルタリングされました！",
+    "format_success": "カタログが正常にフォーマットされました！",
+    "crossmap_filter_success": "crossmap.txtが正常にフィルタリングされました！",
+    "crossmap_generate_success": "crossmap.txtが正常に生成されました！",
+    "native_generate_success": "native.txtが正常に生成されました！",
+    "struct_generate_success": "構造体とリストが正常に生成されました！",
+    "struct_prompt_name": "構造体の名前を入力してください：",
+    "struct_prompt_list": "リストの名前を入力してください：",
+    "struct_prompt_fields": "構造体の引数を入力してください（カンマ区切り）：",
+    "filter_cm_success": "フォーマット成功：{file}",
+    "extract_keys_success": "成功！フィルタリングされたデータが'{output_file}'に保存されました。",
+    "filter_error": "致命的なエラー：{error}"
+}

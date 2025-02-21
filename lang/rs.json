@@ -1,0 +1,23 @@
+{
+    "menu_filter_catalog": "1 Фильтровать netCatalog.json",
+    "menu_format_catalog": "2 Форматировать netCatalog.json",
+    "menu_filter_crossmap": "3 Фильтровать crossmap.txt",
+    "menu_generate_crossmap": "4 Генерировать crossmap.txt",
+    "menu_generate_native": "5 Генерировать native.txt",
+    "menu_generate_struct_list": "6 Генерировать структуру и список из ввода",
+    "menu_quit": "7 Выход",
+    "invalid_choice": "Неверный выбор. Введите 1, 2, 3, 4, 5 или 7.",
+    "enter_choice": "Введите ваш выбор:",
+    "filter_success": "netCatalog.json успешно отфильтрован!",
+    "format_success": "Каталог успешно отформатирован!",
+    "crossmap_filter_success": "crossmap.txt успешно отфильтрован!",
+    "crossmap_generate_success": "crossmap.txt успешно сгенерирован!",
+    "native_generate_success": "native.txt успешно сгенерирован!",
+    "struct_generate_success": "Структура и список успешно сгенерированы!",
+    "struct_prompt_name": "Введите имя структуры:",
+    "struct_prompt_list": "Введите имя списка:",
+    "struct_prompt_fields": "Введите аргументы для структуры (через запятую):",
+    "filter_cm_success": "Успешное форматирование: {file}",
+    "extract_keys_success": "Успех! Отфильтрованные данные сохранены в '{output_file}'.",
+    "filter_error": "Фатальная ошибка: {error}"
+}

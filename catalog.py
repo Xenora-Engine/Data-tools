@@ -1,6 +1,6 @@
 import json
 
-def extract_keys(input_file, output_file, prefixes):
+def extract_keys(input_file, output_file, prefixes, traductions):
     with open(input_file, 'r') as infile:
         data = json.load(infile)
 
@@ -14,4 +14,4 @@ def extract_keys(input_file, output_file, prefixes):
         for key, price in matching_items:
             outfile.write(f"{key}: {price}\n")
 
-    print(f"Succès ! Les données filtrées ont été enregistrées dans '{output_file}'.")
+    print(traductions["extract_keys_success"].format(output_file=output_file))
