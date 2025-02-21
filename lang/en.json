@@ -1,0 +1,23 @@
+{
+    "menu_filter_catalog": "1 Filter netCatalog.json",
+    "menu_format_catalog": "2 Format netCatalog.json",
+    "menu_filter_crossmap": "3 Filter crossmap.txt",
+    "menu_generate_crossmap": "4 Generate crossmap.txt",
+    "menu_generate_native": "5 Generate native.txt",
+    "menu_generate_struct_list": "6 Generate struct and list from input",
+    "menu_quit": "7 Quit",
+    "invalid_choice": "Invalid choice. Enter 1, 2, 3, 4, 5, or 7.",
+    "enter_choice": "Enter your choice:",
+    "filter_success": "netCatalog.json filtered successfully!",
+    "format_success": "catalog formatted successfully!",
+    "crossmap_filter_success": "crossmap.txt filtered successfully!",
+    "crossmap_generate_success": "crossmap.txt generated successfully!",
+    "native_generate_success": "native.txt generated successfully!",
+    "struct_generate_success": "Struct and list generated successfully!",
+    "struct_prompt_name": "Enter the name of the struct:",
+    "struct_prompt_list": "Enter the name of the list:",
+    "struct_prompt_fields": "Enter the arguments for the struct (comma-separated):",
+    "filter_cm_success": "Successfully formatted: {file}",
+    "extract_keys_success": "Success! Filtered data saved to '{output_file}'.",
+    "filter_error": "Fatal error: {error}"
+}

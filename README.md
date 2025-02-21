@@ -9,6 +9,8 @@
 
 - For launch main.py
 
+- this tools is fully traducted
+
 # Contact
 
 - Discord : zenith.dev
