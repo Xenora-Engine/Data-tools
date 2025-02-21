@@ -43,6 +43,3 @@ def generate_catalog():
             f.write(f"        {{\"{name}\", \"{orig}\"}},\n")
         f.write("    };\n")
         f.write("}\n")
-
-if __name__ == "__main__":
-    generate_catalog()
