@@ -1,9 +1,10 @@
 import re
 
+
 def generate_catalog():
     def transform_key(key):
-        key = key.replace('SERVICE_EARN_', '').replace('SERVICE_SPEND_', '')
-        key = key.replace('_', ' ')
+        key = key.replace("SERVICE_EARN_", "").replace("SERVICE_SPEND_", "")
+        key = key.replace("_", " ")
         return key.title()
 
     def safe_int(value):
@@ -17,20 +18,20 @@ def generate_catalog():
             return False
         return True
 
-    with open('net_catalog/filtered_keys.txt', 'r') as f:
+    with open("net_catalog/filtered_keys.txt", "r") as f:
         lines = f.readlines()
 
     transactions = []
 
     for line in lines:
-        if ':' in line:
-            key, value = line.strip().split(':', 1)
+        if ":" in line:
+            key, value = line.strip().split(":", 1)
             value_int = safe_int(value)
             if value_int is not None and should_include(value_int):
                 readable = f"{transform_key(key)} ({value_int})"
                 transactions.append((readable, key))
 
-    with open('net_catalog/catalog.txt', 'w') as f:
+    with open("net_catalog/catalog.txt", "w") as f:
         f.write("#pragma once\n\n")
         f.write("namespace zenith\n{\n")
         f.write("    struct transaction {\n")
@@ -40,6 +41,6 @@ def generate_catalog():
         f.write("    std::vector<transaction> all_transactions = {\n")
         for t in transactions:
             name, orig = t
-            f.write(f"        {{\"{name}\", \"{orig}\"}},\n")
+            f.write(f'        {{"{name}", "{orig}"}},\n')
         f.write("    };\n")
         f.write("}\n")
