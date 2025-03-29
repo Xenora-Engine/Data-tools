@@ -1,6 +1,5 @@
 import re
 
-
 def generate_catalog():
     def transform_key(key):
         key = key.replace("SERVICE_EARN_", "").replace("SERVICE_SPEND_", "")
@@ -29,7 +28,10 @@ def generate_catalog():
             value_int = safe_int(value)
             if value_int is not None and should_include(value_int):
                 readable = f"{transform_key(key)} ({value_int})"
-                transactions.append((readable, key))
+                transactions.append((readable, key, value_int))  # Ajout de la valeur entière pour tri
+
+    # Trier les transactions par valeur (du plus grand au plus petit)
+    transactions.sort(key=lambda x: x[2], reverse=True)
 
     with open("net_catalog/catalog.txt", "w") as f:
         f.write("#pragma once\n\n")
@@ -40,7 +42,7 @@ def generate_catalog():
         f.write("    };\n\n")
         f.write("    std::vector<transaction> all_transactions = {\n")
         for t in transactions:
-            name, orig = t
+            name, orig, _ = t  # On prend juste le nom et l'original
             f.write(f'        {{"{name}", "{orig}"}},\n')
         f.write("    };\n")
         f.write("}\n")
