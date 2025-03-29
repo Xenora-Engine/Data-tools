@@ -33,7 +33,7 @@ class NativeFunc:
 
 def load_natives_data():
     global natives
-    data = json.load(open("native/native.json"))
+    data = json.load(open("src/native/native.json"))
     for ns, natives_list in data.items():
         natives[ns] = []
         for hash_str, native_data in natives_list.items():

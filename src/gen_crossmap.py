@@ -12,7 +12,7 @@ class CrossmapEntry:
 def load_crossmap_data():
     global crossmap
 
-    data = open("native/crossmap.txt").readlines()
+    data = open("src/native/crossmap.txt").readlines()
     for item in data:
         translation = item.split(",")
         crossmap[int(translation[0], 16)] = CrossmapEntry(int(translation[1], 16))

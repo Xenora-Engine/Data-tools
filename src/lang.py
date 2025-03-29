@@ -7,7 +7,7 @@ def load_traductions(langue="fr"):
             return json.load(f)
     except FileNotFoundError:
         print(f"File not found '{langue}.json'")
-        with open("lang/en.json", "r", encoding="utf-8") as f:
+        with open("src/lang/en.json", "r", encoding="utf-8") as f:
             return json.load(f)
 
 

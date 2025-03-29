@@ -75,6 +75,6 @@ def apply_gradient_to_ascii(ascii_art, color1, color2):
     return "\n".join(gradient_ascii)
 
 
-def print_gradient(text, color_start="#FF0000", color_end="#0000FF"):
+def print_gradient(text, color_start="#C2C2F0", color_end="#ffffff"):
     colored_ascii = apply_gradient_to_ascii(text, color_start, color_end)
     print(colored_ascii)

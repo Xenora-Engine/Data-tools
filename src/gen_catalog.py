@@ -17,7 +17,7 @@ def generate_catalog():
             return False
         return True
 
-    with open("net_catalog/filtered_keys.txt", "r") as f:
+    with open("src/net_catalog/filtered_keys.txt", "r") as f:
         lines = f.readlines()
 
     transactions = []
@@ -33,7 +33,7 @@ def generate_catalog():
     # Trier les transactions par valeur (du plus grand au plus petit)
     transactions.sort(key=lambda x: x[2], reverse=True)
 
-    with open("net_catalog/catalog.txt", "w") as f:
+    with open("src/net_catalog/catalog.txt", "w") as f:
         f.write("#pragma once\n\n")
         f.write("namespace zenith\n{\n")
         f.write("    struct transaction {\n")
